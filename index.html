@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Jefferson Silva — AI Researcher & Machine Learning Engineer</title>
+<meta name="description" content="Portfólio de Jefferson Silva: pesquisador e engenheiro de Machine Learning com foco em LLMs, roteamento multimodelo, NLP e visão computacional." />
+<meta name="author" content="Jefferson Silva" />
+<meta property="og:title" content="Jefferson Silva — AI Researcher & ML Engineer" />
+<meta property="og:description" content="Portfólio de Jefferson Silva: LLMs, roteamento multimodelo, NLP e visão computacional." />
+<meta property="og:type" content="website" />
+<style>
+  :root {
+    --bg: #0f1115;
+    --surface: #161922;
+    --border: #262a36;
+    --text: #e6e8ef;
+    --muted: #9aa0b0;
+    --accent: #7aa2ff;
+    --accent-2: #9ef0c1;
+    --code: #f6c177;
+    --maxw: 880px;
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #fafafa;
+      --surface: #ffffff;
+      --border: #e6e6ec;
+      --text: #1a1d24;
+      --muted: #5b6172;
+      --accent: #2a52be;
+      --accent-2: #18794e;
+      --code: #b06b00;
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.55;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+  }
+  main { max-width: var(--maxw); margin: 0 auto; padding: 48px 24px 96px; }
+  header { padding-bottom: 24px; border-bottom: 1px solid var(--border); margin-bottom: 32px; }
+  h1 { font-size: 2rem; margin: 0 0 4px; letter-spacing: -0.02em; }
+  .subtitle { color: var(--muted); font-size: 1.05rem; margin: 0 0 12px; }
+  .meta { color: var(--muted); font-size: 0.92rem; }
+  .meta a { color: var(--accent); text-decoration: none; }
+  .meta a:hover { text-decoration: underline; }
+  .meta span + span::before { content: " · "; color: var(--border); padding: 0 4px; }
+
+  section { margin-top: 36px; }
+  h2 {
+    font-size: 1.05rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 6px;
+    margin: 0 0 16px;
+  }
+  h3 { font-size: 1.05rem; margin: 0 0 4px; }
+  p { margin: 0 0 12px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; color: var(--code); font-size: 0.92em; }
+  ul { margin: 4px 0 12px; padding-left: 20px; }
+  li { margin-bottom: 4px; }
+
+  .item { margin-bottom: 20px; }
+  .item .title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .item .title-row .when { color: var(--muted); font-size: 0.9rem; white-space: nowrap; }
+  .item .org { color: var(--muted); font-size: 0.95rem; margin-bottom: 4px; }
+  .item p { margin-bottom: 6px; }
+
+  .card-grid { display: grid; grid-template-columns: 1fr; gap: 14px; }
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 18px;
+  }
+  .card h3 { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+  .card h3 .repo {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.82rem;
+    font-weight: 400;
+    color: var(--accent);
+  }
+  .card .stack { margin-top: 8px; font-size: 0.85rem; color: var(--muted); }
+  .card .stack code { background: transparent; }
+  .badge {
+    display: inline-block;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1px 8px;
+    font-size: 0.78rem;
+    color: var(--muted);
+    margin-right: 4px;
+  }
+  .badge.private { color: var(--code); border-color: var(--code); }
+  .badge.public { color: var(--accent-2); border-color: var(--accent-2); }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 6px 18px;
+    font-size: 0.95rem;
+  }
+  .skills-grid dt { color: var(--muted); }
+  .skills-grid dd { margin: 0; }
+
+  footer {
+    margin-top: 56px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.85rem;
+    text-align: center;
+  }
+
+  @media (max-width: 600px) {
+    main { padding: 32px 18px 64px; }
+    h1 { font-size: 1.6rem; }
+    .skills-grid { grid-template-columns: 1fr; gap: 2px; }
+    .skills-grid dt { margin-top: 6px; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Jefferson Silva</h1>
+    <p class="subtitle">AI Researcher &amp; Machine Learning Engineer</p>
+    <p class="meta">
+      <span>Natal, Brasil</span>
+      <span><a href="mailto:jefferson.igorbr@gmail.com">jefferson.igorbr@gmail.com</a></span>
+      <span><a href="https://github.com/jeffersonduartebr" target="_blank" rel="noopener">github.com/jeffersonduartebr</a></span>
+    </p>
+  </header>
+
+  <section id="summary">
+    <h2>Resumo</h2>
+    <p>
+      Pesquisador e engenheiro de Machine Learning com mais de dez anos como professor-pesquisador no IFRN, atuando na ponte entre pesquisa e produção em <strong>orquestração de LLMs</strong>, NLP, visão computacional e sistemas escaláveis de inferência. Doutorando em Inovação em Tecnologias Educacionais (UFRN), mestre em Sistemas Embarcados (UFRN) e especialista em Engenharia de Dados (CESAR). Projetei sistemas de roteamento multimodelo que reduziram custos de inferência em 30% e pipelines locais com Ollama para revisão sistemática, sumarização e mineração de literatura científica.
+    </p>
+  </section>
+
+  <section id="research-interests">
+    <h2>Interesses de pesquisa</h2>
+    <p>
+      Large Language Models (LLMs), roteamento multimodelo, inferência custo-consciente, sistemas de Machine Learning, otimização, infraestrutura para IA, equidade algorítmica.
+    </p>
+  </section>
+
+  <section id="education">
+    <h2>Formação</h2>
+
+    <div class="item">
+      <div class="title-row"><h3>Doutorado em Inovação em Tecnologias Educacionais</h3><span class="when">2025 – presente</span></div>
+      <div class="org">Universidade Federal do Rio Grande do Norte (UFRN)</div>
+    </div>
+
+    <div class="item">
+      <div class="title-row"><h3>Mestrado em Sistemas Embarcados</h3><span class="when">2017 – 2018</span></div>
+      <div class="org">Universidade Federal do Rio Grande do Norte (UFRN)</div>
+    </div>
+
+    <div class="item">
+      <div class="title-row"><h3>Especialização em Engenharia de Dados</h3><span class="when">2023 – 2024</span></div>
+      <div class="org">CESAR School</div>
+    </div>
+
+    <div class="item">
+      <div class="title-row"><h3>Bacharelado em Redes de Computadores</h3><span class="when">2011 – 2013</span></div>
+      <div class="org">Instituto Federal do Rio Grande do Norte (IFRN)</div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>Experiência</h2>
+
+    <div class="item">
+      <div class="title-row"><h3>Professor e Pesquisador</h3><span class="when">2014 – presente</span></div>
+      <div class="org">Instituto Federal do Rio Grande do Norte (IFRN)</div>
+      <ul>
+        <li>Projetou e implementou sistemas de IA aplicados a educação, cibersegurança e sistemas industriais.</li>
+        <li>Conduziu pesquisa em orquestração de LLMs e estratégias de roteamento inteligente.</li>
+        <li>Construiu infraestrutura para experimentação em ML com Linux, Docker e ambientes baseados em GPU.</li>
+        <li>Orientou projetos em Machine Learning, sistemas distribuídos e engenharia de backend.</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <div class="title-row"><h3>Analista de Redes</h3><span class="when">2012 – 2014</span></div>
+      <div class="org">Universidade Federal do Rio Grande do Norte (UFRN)</div>
+      <ul>
+        <li>Gerenciou infraestrutura de rede em larga escala (BGP, OSPF).</li>
+        <li>Administrou servidores Linux/Windows e sistemas de monitoramento.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projetos selecionados</h2>
+    <div class="card-grid">
+
+      <div class="card">
+        <h3>
+          <span>ARISTO — Roteador multiobjetivo de LLMs <span class="badge public">público</span></span>
+          <a class="repo" href="https://github.com/jeffersonduartebr/iag_forall" target="_blank" rel="noopener">jeffersonduartebr/iag_forall ↗</a>
+        </h3>
+        <p>Sistema de roteamento de LLMs/VLMs que decide o melhor modelo por <strong>custo, latência e qualidade</strong>, com RAG, cache semântico, fila assíncrona, backpressure adaptativo e observabilidade. Reduziu custos de inferência em <strong>30%</strong> integrando múltiplos provedores.</p>
+        <div class="stack"><code>FastAPI · ChromaDB · MariaDB · Redis · Celery · Ollama · Prometheus · Docker</code></div>
+      </div>
+
+      <div class="card">
+        <h3>
+          <span>Patchy Collector <span class="badge private">confidencial</span></span>
+        </h3>
+        <p>Solução baseada em LLMs para aplicação de patches em kernels Linux entre múltiplos vendors e versões. Reduziu falhas de deploy e o tempo de resolução de SLA.</p>
+        <div class="stack"><code>LLMs · Linux · Automação de patching</code></div>
+      </div>
+
+      <div class="card">
+        <h3>
+          <span>Assistente imobiliário baseado em LLM — Duna Labs <span class="badge private">confidencial</span></span>
+        </h3>
+        <p>Solução LLM dedicada a corretores e imobiliárias. Reduziu tempo de resposta, aumentou satisfação e diminuiu carga de trabalho automatizando interações de rotina.</p>
+        <div class="stack"><code>LLMs · NLP · Automação de atendimento</code></div>
+      </div>
+
+      <div class="card">
+        <h3>
+          <span>Paper Summarizer <span class="badge public">público</span></span>
+          <a class="repo" href="https://github.com/jeffersonduartebr/Paper_summarizer" target="_blank" rel="noopener">jeffersonduartebr/Paper_summarizer ↗</a>
+        </h3>
+        <p>Gerador de capítulo comparativo a partir de PDFs científicos. Faz extração nativa ou OCR fallback, chunking GPU-aware (ajustado à VRAM disponível) e síntese com LLM local em português.</p>
+        <div class="stack"><code>Python · Ollama · PyMuPDF · pytesseract · CUDA</code></div>
+      </div>
+
+      <div class="card">
+        <h3>
+          <span>Document Chat &amp; PRISMA Review <span class="badge public">público</span></span>
+          <a class="repo" href="https://github.com/jeffersonduartebr/document_chat" target="_blank" rel="noopener">jeffersonduartebr/document_chat ↗</a>
+        </h3>
+        <p>Aplicação Streamlit para Q&amp;A multi-documento e geração automática de revisão sistemática PRISMA. Cache de duas camadas (memória + disco) e inferência GPU-acelerada em Docker.</p>
+        <div class="stack"><code>Streamlit · Docling · Ollama · Docker · NVIDIA CUDA</code></div>
+      </div>
+
+      <div class="card">
+        <h3>
+          <span>Paper Mining — Local Abstracts Analyzer <span class="badge public">público</span></span>
+          <a class="repo" href="https://github.com/jeffersonduartebr/paper_mining" target="_blank" rel="noopener">jeffersonduartebr/paper_mining ↗</a>
+        </h3>
+        <p>Pipeline em Python para análise em massa de abstracts científicos com LLM local. Multiprocessing, retomada de processamento e privacidade — sem chamadas externas.</p>
+        <div class="stack"><code>Python · Ollama · multiprocessing · CSV</code></div>
+      </div>
+
+      <div class="card">
+        <h3>
+          <span>Predição de demanda do Judiciário (TJRN) <span class="badge public">público</span></span>
+          <a class="repo" href="https://github.com/jeffersonduartebr/tcc_cesar" target="_blank" rel="noopener">jeffersonduartebr/tcc_cesar ↗</a>
+        </h3>
+        <p>TCC da especialização em Engenharia de Dados. Ferramenta de predição de demanda e produção das serventias judiciais, focada em mitigar processos com mais de 60 dias e apoiar inspeções da Corregedoria.</p>
+        <div class="stack"><code>Jupyter · Pandas · scikit-learn · Time series</code></div>
+      </div>
+
+      <div class="card">
+        <h3>
+          <span>Classificação de imagens com EfficientNet <span class="badge public">público</span></span>
+          <a class="repo" href="https://github.com/jeffersonduartebr/dataset_ovos" target="_blank" rel="noopener">jeffersonduartebr/dataset_ovos ↗</a>
+        </h3>
+        <p>Fine-tuning de EfficientNetV2B1 (5 e 150 camadas) para classificação de imagens, atingindo <strong>83% de acurácia</strong>. Dataset disponibilizado no <a href="https://universe.roboflow.com/projetos-egvuo/deteccao_ovos" target="_blank" rel="noopener">Roboflow</a>.</p>
+        <div class="stack"><code>TensorFlow · Keras · CNN · Transfer learning</code></div>
+      </div>
+
+      <div class="card">
+        <h3>
+          <span>Dashboard iConcurso <span class="badge public">público</span></span>
+          <a class="repo" href="https://github.com/jeffersonduartebr/Dashboard_iconcurso" target="_blank" rel="noopener">jeffersonduartebr/Dashboard_iconcurso ↗</a>
+        </h3>
+        <p>Dashboard de KPIs para projeto da disciplina de Inovação Tecnológica (CESAR), com geração e validação de dados.</p>
+        <div class="stack"><code>Pandas · NumPy · Dash</code></div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="publications">
+    <h2>Publicações</h2>
+    <ul>
+      <li><strong>The Logic of Forgetting: Power, Data Governance, and the Decolonial Critique of AI.</strong> Linguagem em Foco, 2025.</li>
+      <li><strong>Application of Computer Vision for Tool Recognition in Machining.</strong> SIMPEX, 2025.</li>
+      <li><strong>Flexible Manufacturing System using Computer Vision.</strong> CONEM, 2024.</li>
+      <li><strong>Botnet Detection using Machine Learning.</strong> Brazilian Journal of Development, 2022.</li>
+      <li><strong>Wireless Data Transmission System.</strong> SN Applied Sciences, 2021.</li>
+      <li><strong>AI-based Tool for NoC Design Space Exploration.</strong> 2021.</li>
+      <li><strong>Evolutionary vs Local Search in NoC Design.</strong> IJICA, 2020.</li>
+      <li><strong>Latency Prediction using Machine Learning.</strong> Journal of Supercomputing, 2019.</li>
+    </ul>
+    <p class="meta" style="margin-top:8px;">
+      Lista completa e DOIs disponíveis no <a href="http://lattes.cnpq.br/8083389022423202" target="_blank" rel="noopener">Currículo Lattes</a> e <a href="https://scholar.google.com.br/citations?user=D9XeX9cAAAAJ" target="_blank" rel="noopener">Google Scholar</a>.
+    </p>
+  </section>
+
+  <section id="skills">
+    <h2>Habilidades técnicas</h2>
+    <dl class="skills-grid">
+      <dt>Linguagens</dt><dd>Python, C++, Java, SQL</dd>
+      <dt>ML / IA</dt><dd>LLMs, RAG, Otimização, Visão Computacional, Machine Learning</dd>
+      <dt>Frameworks</dt><dd>PyTorch, TensorFlow/Keras, FastAPI, Streamlit, Docling</dd>
+      <dt>Infra</dt><dd>Docker, Linux, CUDA, Redis, MariaDB, ChromaDB, Celery, Prometheus</dd>
+      <dt>Práticas</dt><dd>Sistemas distribuídos, APIs, deploy de modelos, MLOps</dd>
+    </dl>
+  </section>
+
+  <section id="contact">
+    <h2>Contato</h2>
+    <p>
+      <a href="mailto:jefferson.igorbr@gmail.com">jefferson.igorbr@gmail.com</a> ·
+      <a href="https://github.com/jeffersonduartebr" target="_blank" rel="noopener">GitHub</a> ·
+      <a href="https://www.linkedin.com/in/jefferson-silva-a5aa8a24/" target="_blank" rel="noopener">LinkedIn</a> ·
+      <a href="https://orcid.org/0000-0002-4346-1160" target="_blank" rel="noopener">ORCID</a> ·
+      <a href="http://lattes.cnpq.br/8083389022423202" target="_blank" rel="noopener">Lattes</a> ·
+      <a href="https://scholar.google.com.br/citations?user=D9XeX9cAAAAJ" target="_blank" rel="noopener">Scholar</a>
+    </p>
+  </section>
+
+  <footer>
+    <p>© <span id="year">2026</span> Jefferson Silva · Construído com HTML estático, hospedado no GitHub Pages.</p>
+  </footer>
+</main>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
